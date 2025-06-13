@@ -4,8 +4,8 @@ import RecipeList from '../components/RecipeList';
 describe('RecipeList', () => {
   it('renders loading state correctly', () => {
     render(<RecipeList recipes={[]} loading={true} />);
-    expect(screen.getByTestId('skeleton-1')).toBeInTheDocument();
-    expect(screen.getByTestId('skeleton-2')).toBeInTheDocument();
+    const skeletons = document.querySelectorAll('.animate-pulse');
+    expect(skeletons).toHaveLength(2);
   });
 
   it('renders empty state correctly', () => {
