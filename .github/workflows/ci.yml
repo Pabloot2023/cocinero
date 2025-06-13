@@ -35,7 +35,12 @@ jobs:
       run: npx playwright install --with-deps chromium
       
     - name: Run Playwright tests
-      run: npm run test:e2e
+      run: |
+        npm run dev &
+        npx wait-on http://localhost:3000
+        npm run test:e2e
+      env:
+        CI: true
       
     - name: Deploy to Vercel
       if: github.ref == 'refs/heads/master' && success()
