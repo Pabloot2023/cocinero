@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,4 +53,5 @@ jobs:
         working-directory: ./
         vercel-args: '--prod'
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        vercel-version: 32.5.1 
+        vercel-version: 32.5.1
+        github-comment: false 
