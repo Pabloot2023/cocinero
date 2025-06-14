@@ -1,6 +1,6 @@
 {
   "title": "Cocinero",
-  "description": "...",
+  "description": "Cocinero AI - Simple - Decile que tenes, Te dice que Cocinar",
   "tech": ["React", "Node"],
   "demo": "https://cocinero.vercel.app/"
 }
