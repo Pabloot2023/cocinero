@@ -42,4 +42,4 @@ Caso	¿Deploya a producción?
 ❌ Cualquier test falla	❌ No
 
 🗂️ Archivo de configuración
-La lógica está definida en .github/workflows/ci.yml
+La lógica está definida en .github/workflows/ci.yml .
